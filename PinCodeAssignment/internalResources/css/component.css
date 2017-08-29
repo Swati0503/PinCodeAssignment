@@ -1,0 +1,16 @@
+#loginSignup {
+    width: 175px;
+    float: right;
+    margin-right: 0px;
+    position: relative;
+}
+
+#signUp, #login {
+	float: left;
+	padding: 10px 0px 8px 8px;
+}
+
+#signUp>li>a, #login>li>a {
+	text-decoration: none;
+	cursor: pointer;
+}

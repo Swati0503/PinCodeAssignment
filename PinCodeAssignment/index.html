@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Let Me Find You </title>
+    
+
+    <script src="externalResources/js/angular/angular.js"></script>
+    <script src="externalResources/js/angular/angular-route.min.js"></script>
+    <script src="externalResources/js/bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="externalResources/js/angular/angular-animate.js"></script>
+    <script src="externalResources/js/angular/angular-sanitize.js"></script>
+
+    <script src="internalResources/js/traceLocationModule.js"></script>
+    <script src="internalResources/js/letMeFindYouController.js"></script>
+    <script src="internalResources/js/controllers/signUpController.js"></script>
+    <script src="internalResources/js/controllers/loginController.js"></script>
+    
+    <script src="internalResources/js/hereIAm.js"></script>
+
+    <link rel="stylesheet" href="externalResources/css/sideBar/sideBar.css">
+
+    <link rel="stylesheet" type="text/CSS" href="externalResources/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/CSS" href="internalResources/css/index.css"/>
+    <link rel="stylesheet" type="text/CSS" href="internalResources/css/carousel.css"/>
+    <link rel="stylesheet" type="text/CSS" href="internalResources/css/component.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body data-ng-app="letMeFindYouApp" data-ng-controller="letMeFindYouController" style="font-family: 'Ramaraja';">
+    <div data-ng-include="'header.html'">
+      
+    </div>
+    <div style="height: 538px;width: 90%; margin: auto;">
+      
+        <div class="col-sm-3 heading"> 
+          City <br>
+          <input type="text" class="search" ng-model="search.city" class="inputText">
+        </div>
+        <div class="col-sm-3 heading">
+          Country <br>
+          <input type="text" class="search" ng-model="search.country" class="inputText"> 
+        </div>
+        <div class="col-sm-2 heading"> 
+          Postal Code <br>
+          <input type="text" class="search" ng-model="search.postal_code" class="inputText">  
+        </div>
+        <div class="col-sm-2 heading"> 
+          Longitude <br>
+          <input type="text" class="search" ng-model="search.longitude" class="inputText">
+        </div>
+        <div class="col-sm-2 heading">
+          Latitude <br>
+          <input type="text" class="search"  ng-model="search.longitude" class="inputText">
+        </div>
+      <div data-ng-repeat="data in mapData | filter:search | orderBy:'city':reverse | startFrom:currentPage*pageSize | limitTo:pageSize" style="float:left; width:100%; overflow-y: auto; max-height: 99%;">
+        <div class="col-sm-3 data"> {{data.city}} </div>
+        <div class="col-sm-3 data"> {{data.country}} </div>
+        <div class="col-sm-2 data" data-ng-if="data.postal_code != null"> {{data.postal_code}} </div>
+        <div class="col-sm-2 data" data-ng-if="data.postal_code === null"> Not Available </div>
+        <div class="col-sm-2 data"> {{data.longitude}} </div>
+        <div class="col-sm-2 data"> {{data.latitude}} </div>
+      </div>
+
+      <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+
+    </div>    
+      
+    </div>
+  </body>
+</html>

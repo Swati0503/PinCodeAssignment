@@ -1,0 +1,145 @@
+body {margin:0}
+
+@font-face {
+    font-family: 'Ramaraja';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ramaraja'), url(https://fonts.gstatic.com/s/ramaraja/v1/WC_25qm3dPCtNMRzCqE7X_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+.heading {
+    border: 1px solid; height: 78px; font-size: 21px; text-align: center; padding-top: 10px;
+}
+
+.data {
+        border: 1px solid;
+    height: 50px;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.search {
+    width: 85%;
+    height: 25px;
+    font-size: 14px;
+    background: url("../images/search.jpg");
+    background-repeat: no-repeat;
+    background-position: right; 
+}
+
+.navbar-inverse .navbar-brand {
+    color: white; 
+}
+
+.title {
+    font-size: 28px;
+    margin-top: 5px; 
+    position: absolute; 
+    cursor: context-menu;
+} 
+
+#map {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/*------------------------ Header CSS ------------------------*/
+
+.selectedMenuBar {
+    background-color: #818181 !important;
+}
+
+.selectedMenuBarItem {
+    color: white !important;
+}
+
+.nav>li:hover {
+    background-color: #818181; 
+}
+
+.menuBar {
+    float: right;
+    font-size: 20px;
+    height: 48px;
+    margin-right: 2.777%;
+    cursor: pointer;
+}
+
+.menuBarItems {
+    height: 48px;
+    padding-top: 3px;
+}
+
+.signUp, .login {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-right: 10px !important;
+    color: #222222;
+}
+
+.signUp :hover {
+    color: #222222;
+} 
+
+/*------------------------ Header CSS Ended------------------------*/
+
+/*------------------------ Social Connect CSS ------------------------*/
+.icon-bar {
+    margin-top: 80px;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 11px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 30px;
+    height: 50px;
+}
+
+.icon-bar a:hover {
+    background-color: #555;
+}
+
+.popover.left {
+    width: 85px;
+    height: 30px;
+    font-family: 'Ramaraja';
+    font-size: 17px;
+}
+
+.popover-content {
+    padding: 3px 5px 8px 10px;
+}
+
+/*------------------------ Social Connect CSS Ended ------------------------*/
+
+/*------------------------ SideBar CSS ------------------------*/
+
+.sidenav {
+    background-color: #222222;
+    padding-top: 60px;
+    cursor: pointer;
+}
+
+.sidenav div {
+    padding: 6px 6px 6px 38px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav div:hover {
+    color: #f1f1f1;
+}
+
+.selectedSideNav {
+    color: white !important;
+}
+
+/*------------------------ SideBar CSS Ended ------------------------*/
